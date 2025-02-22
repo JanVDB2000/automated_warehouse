@@ -28,7 +28,7 @@ class Robot:
             pixel_y - self.robot_radius,
             pixel_x + self.robot_radius,
             pixel_y + self.robot_radius,
-            fill="red"
+            fill="blue"
         )
 
     def move_step(self):

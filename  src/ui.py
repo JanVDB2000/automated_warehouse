@@ -7,11 +7,12 @@ class WarehouseApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Geautomatiseerd Magazijn")
-        size = 50
-        self.canvas = tk.Canvas(self, width=size * 10, height=size * 10, bg="white")
+        size = 25
+        self.canvas = tk.Canvas(self, width=size * 20, height=size * 20, bg="white")
         self.canvas.pack()
 
-        self.warehouse = Warehouse(self.canvas, rows=size, cols=size, cell_size=10)
+        self.warehouse = Warehouse(self.canvas, rows=size, cols=size, cell_size=20)
+        self.warehouse.update_all_cells()
 
         # 25 robots, elk startend op een willekeurig store point
         for i in range(25):

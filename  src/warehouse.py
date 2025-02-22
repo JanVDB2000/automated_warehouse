@@ -10,7 +10,7 @@ class Warehouse:
         self.cell_size = cell_size
 
         # Grid met voorraad
-        self.grid = [[10 for _ in range(cols)] for _ in range(rows)]
+        self.grid = [[ random.randint(0, 50) for _ in range(cols)] for _ in range(rows)]
         self.cell_rectangles = [[None for _ in range(cols)] for _ in range(rows)]
 
         # Store points (rij, kolom)
@@ -61,7 +61,7 @@ class Warehouse:
             y2 = y1 + self.cell_size
             self.canvas.create_rectangle(
                 x1, y1, x2, y2,
-                fill="lightgreen", outline="black"
+                fill="lightblue", outline="black"
             )
 
     def is_cell_occupied(self, r, c):
@@ -155,7 +155,7 @@ class Warehouse:
     def deliver_product(self, robot, cell):
         r, c = cell
         amount = 5  # Hoeveelheid om bij te vullen
-        max_stock = 10
+        max_stock = 25
         old_val = self.grid[r][c]
         self.grid[r][c] = min(self.grid[r][c] + amount, max_stock)
         print(f"Robot {robot.id} levert product aan cel {cell}. Voorraad: {old_val} -> {self.grid[r][c]}")

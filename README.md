@@ -2,6 +2,8 @@
 
 Dit project is een simulatie van een geautomatiseerd magazijn waarin robots bestellingen ophalen en voorraad aanvullen. De robots navigeren door een grid, vermijden obstakels en werken samen om taken efficiënt uit te voeren.
 
+![alt text](./img.png)
+
 ## 📌 Functionaliteiten
 
 - **Robots** bewegen autonoom binnen het magazijn.
